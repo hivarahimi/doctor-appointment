@@ -1,0 +1,24 @@
+spring:
+  application:
+    name: doctor-appointment
+  security:
+    user:
+      name: admin
+      password: test
+  liquibase:
+    enabled: false
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.DB2Dialect
+        default_schema: SCHEMA_SECURITY
+        show_sql: true
+        format_sql: true
+  datasource:
+    driver-class-name: com.ibm.db2.jcc.DB2Driver
+    url: jdbc:db2://127.0.0.1:50000/carddb
+    username: db2inst1
+    password: 123456789
